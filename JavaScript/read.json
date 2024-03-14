@@ -1,0 +1,191 @@
+[
+    {
+        "id": 1,
+        "name": "Awesome Product 1",
+        "price": 60.67,
+        "priceAfterDiscount": 40,
+        "imageName": "product1",
+        "isNew": false,
+        "retings": 3
+    },
+    {
+        "id": 2,
+        "name": "Cool Product 2",
+        "price": 40.55,
+        "priceAfterDiscount": 35,
+        "imageName": "product2",
+        "isNew": true,
+        "retings": 4
+    },
+    {
+        "id": 3,
+        "name": "Awesome Product 3",
+        "price": 29.3,
+        "priceAfterDiscount": 23,
+        "imageName": "product3",
+        "isNew": false,
+        "retings": 2
+    },
+    {
+        "id": 4,
+        "name": "Huge Product 4",
+        "price": 35.2,
+        "priceAfterDiscount": 30,
+        "imageName": "product4",
+        "isNew": false,
+        "retings": 4
+    },
+    {
+        "id": 5,
+        "name": "Tiny Product 5",
+        "price": 56.8,
+        "priceAfterDiscount": 49,
+        "imageName": "product5",
+        "isNew": true,
+        "retings": 5
+    },
+    {
+        "id": 6,
+        "name": "Expencive Product 6",
+        "price": 80.6,
+        "priceAfterDiscount": 72,
+        "imageName": "product6",
+        "isNew": true,
+        "retings": 5
+    },
+    {
+        "id": 7,
+        "name": "Awesome Product 2",
+        "price": 65.95,
+        "priceAfterDiscount": 62.4,
+        "imageName": "product6",
+        "isNew": false,
+        "retings": 3.4
+    },
+    {
+        "id": 8,
+        "name": "Cool Product 3",
+        "price": 70.4,
+        "priceAfterDiscount": 68.37,
+        "imageName": "product2",
+        "isNew": true,
+        "retings": 4.7
+    },
+    {
+        "id": 9,
+        "name": "Awesome Product 4",
+        "price": 74.28,
+        "priceAfterDiscount": 74.34,
+        "imageName": "product4",
+        "isNew": false,
+        "retings": 3.1
+    },
+    {
+        "id": 10,
+        "name": "Huge Product 5",
+        "price": 79.42,
+        "priceAfterDiscount": 80.31,
+        "imageName": "product5",
+        "isNew": false,
+        "retings": 4.6
+    },
+    {
+        "id": 11,
+        "name": "Tiny Product 6",
+        "price": 83.57,
+        "priceAfterDiscount": 86.28,
+        "imageName": "product1",
+        "isNew": true,
+        "retings": 2.4
+    },
+    {
+        "id": 12,
+        "name": "Expencive Product 7",
+        "price": 87.1,
+        "priceAfterDiscount": 92.25,
+        "imageName": "product3",
+        "isNew": false,
+        "retings": 4.4
+    },
+    {
+        "id": 13,
+        "name": "Awesome Product 3",
+        "price": 92.85,
+        "priceAfterDiscount": 98.22,
+        "imageName": "product3",
+        "isNew": true,
+        "retings": 3.9
+    },
+    {
+        "id": 14,
+        "name": "Cool Product 4",
+        "price": 96.81,
+        "priceAfterDiscount": 104.2,
+        "imageName": "product4",
+        "isNew": false,
+        "retings": 5
+    },
+    {
+        "id": 15,
+        "name": "Awesome Product 5",
+        "price": 101.21,
+        "priceAfterDiscount": 110.17,
+        "imageName": "product2",
+        "isNew": false,
+        "retings": 4
+    },
+    {
+        "id": 16,
+        "name": "Huge Product 5",
+        "price": 79.42,
+        "priceAfterDiscount": 80.31,
+        "imageName": "product5",
+        "isNew": false,
+        "retings": 4.6
+    },
+    {
+        "id": 17,
+        "name": "Tiny Product 6",
+        "price": 83.57,
+        "priceAfterDiscount": 86.28,
+        "imageName": "product5",
+        "isNew": true,
+        "retings": 2.4
+    },
+    {
+        "id": 18,
+        "name": "Expencive Product 7",
+        "price": 87.1,
+        "priceAfterDiscount": 92.25,
+        "imageName": "product1",
+        "isNew": false,
+        "retings": 4.4
+    },
+    {
+        "id": 19,
+        "name": "Awesome Product 3",
+        "price": 92.85,
+        "priceAfterDiscount": 98.22,
+        "imageName": "product2",
+        "isNew": true,
+        "retings": 3.9
+    },
+    {
+        "id": 20,
+        "name": "Cool Product 4",
+        "price": 96.81,
+        "priceAfterDiscount": 104.2,
+        "imageName": "product6",
+        "isNew": false,
+        "retings": 5
+    },
+    {
+        "id": 21,
+        "name": "Awesome Product 5",
+        "price": 101.21,
+        "priceAfterDiscount": 110.17,
+        "imageName": "product3",
+        "isNew": false,
+        "retings": 4
+    }
+]

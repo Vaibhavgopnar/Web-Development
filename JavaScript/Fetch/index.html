@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Method</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+        Title <input type="text" name="" id="titleText"><br><br>
+        Body <input type="text" name="" id="bodyText"><br><br>
+        User Id <input type="text" name="" id="userid"><br><br>
+        <input type="submit" value="Submit" id="saveForm">
+    </form>
+
+
+    <script> 
+        // fetch("readme.txt")
+        // .then((response) => {
+        //     return response.text();
+        // })
+        // .then((data) => {
+        //     // console.log(data)
+        //     document.write(data)
+        // });
+
+        // decrease size of fetch
+        // fetch("/JavaScript/Read.json")
+        // .then(response => response.json())
+        // .then(data => {
+        //     // console.log(data)
+        //     for(var x in data){
+        //         var a = `${data[x].id} - ${data[x].name} - ${data[x].price} <br>`;
+        //         document.write(a)
+        //     }
+        // })
+        // .catch((error) => document.write("Can't fetch data"));
+
+        document.getElementById('saveForm').addEventListener('click', function (e) {
+
+            e.preventDefault()
+
+            // var obj = {
+            //     title: document.getElementById('titleText').value,
+            //     body: document.getElementById('bodyText').value,
+            //     userId: document.getElementById('userid').value,
+            // }
+
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                // body: JSON.stringify(obj),
+                body: new FormData(document.getElementById('myForm')),
+                headers: {
+                    'Content-type': 'application/x-www-form-urlencoded',  // for json application/json
+                },
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
+
+        })
+    </script>
+</body>
+
+</html>

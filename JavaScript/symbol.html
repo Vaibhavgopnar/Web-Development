@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    
+    <script>
+        let id = Symbol("Hello")
+        let id1 = Symbol("Hello")
+
+        console.log(id === id1)
+        console.log(typeof id)
+
+        let id2 = Symbol("Hello")
+        
+        console.log(id2)
+        console.log(id2.description)
+
+        let age = Symbol("age");
+        let user = {
+            name : 'Vaibhav',
+            class : 'Btech',
+            // [age] : 25
+        };
+        user[age] = 25;
+        user["gender"] = "Male";
+
+
+        console.log(user);
+
+        console.log(JSON.stringify(user));
+
+        // for(let key in user){
+        //     console.log(key);
+        // }
+
+
+        // console.log(user.class);
+        // console.log(user[age]);
+        
+        
+
+    </script>
+</body>
+</html>

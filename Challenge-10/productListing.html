@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swag of India</title>
+  <link rel="icon" type="images/png" href="images/flavicon.png">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/ebd8283d0b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <style>
+    label{
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="main-header"> </header>
+
+  <nav aria-label="breadcrumb" id="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="productListing.html">Categories</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Winter</li>
+    </ol>
+  </nav>
+  <aside class="mega-container ml-lg-5">
+    <nav class="nav flex-column">
+      <h3> Filter By </h6>
+        <div class="mt-4">
+          <h5>Categories</h5>
+          <input type="checkbox" name="" id="cloths">
+          <label for="cloths">Kurtas (2821)</label>
+          <br>
+          <input type="checkbox" name="" id="cloths">
+          <label for="cloths">Sherwani (1921)</label>
+        </div>
+        <div class="mt-4 ">
+          <h5>Price</h5>
+          <input type="checkbox" name="" id="price">
+          <label for="price">Rs 500 to Rs 5000</label>
+          <br>
+          <input type="checkbox" name="" id="price">
+          <label for="price">Rs 700 to Rs 8000</label>
+          <br>
+          <input type="checkbox" name="" id="price">
+          <label for="price">Rs 1000 to Rs 10000</label>
+        </div>
+
+        <div class="mt-4 ">
+          <h5>Discount</h5>
+          <input type="checkbox" name="" id="discount">
+          <label for="discount">Lorem</label>
+          <br>
+          <input type="checkbox" name="" id="discount">
+          <label for="discount">ipsum (1921)</label>
+          <br>
+          <input type="checkbox" name="" id="discount">
+          <label for="discount">dolor (1921)</label>
+          <br>
+          <input type="checkbox" name="" id="discount">
+          <label for="discount">ipsum (1921)</label>
+          <br>
+          <input type="checkbox" name="" id="discount">
+          <label for="discount">amet (1921)</label>
+          <br>
+          <input type="checkbox" name="" id="discount">
+          <label for="discount">elit (1921)</label>
+        </div>
+
+        <div class="mt-4 ">
+          <h5>Availability</h5>
+          <input type="checkbox" name="" id="cloths">
+          <label for="cloths">Kurtas (2821)</label>
+          <br>
+          <input type="checkbox" name="" id="cloths">
+          <label for="cloths">Sherwani (1921)</label>
+        </div>
+
+        <div class="mt-4 ">
+          <h5>Brand</h5>
+          <input type="checkbox" name="" id="brand">
+          <label for="brand">Lorem</label>
+          <br>
+          <input type="checkbox" name="" id="brand">
+          <label for="brand">ipsum </label>
+          <br>
+          <input type="checkbox" name="" id="brand">
+          <label for="brand">dolor (1921)</label>
+          <br>
+          <input type="checkbox" name="" id="brand">
+          <label for="brand">ipsum </label>
+          <br>
+          <input type="checkbox" name="" id="brand">
+          <label for="brand">amet </label>
+          <br>
+          <input type="checkbox" name="" id="brand">
+          <label for="brand">elit (1921)</label>
+        </div>
+
+        <div class="mt-4 ">
+          <h5>Rating</h5>
+          <input type="checkbox" name="" id="rating">
+          <label for="rating">3.2 - 4</label>
+          <br>
+          <input type="checkbox" name="" id="rating">
+          <label for="rating">3 - 4.5</label>
+          <br>
+          <input type="checkbox" name="" id="rating">
+          <label for="rating">3 - 4.5</label>
+          <br>
+          <input type="checkbox" name="" id="rating">
+          <label for="rating">2 - 4</label>
+          <br>
+          <input type="checkbox" name="" id="rating">
+          <label for="rating">4 - 5</label>
+        </div>
+
+    </nav>
+  </aside>
+
+  <section class="latest-product-area padding-bootom">
+    <div class="container">
+      <div class="row product-btn justify-content-end align-items-end">
+        <!-- section title -->
+        <div class="top-flex-container d-flex">
+          <h5 class="font-weight-bold mb-2">My Wishlist</h5>
+          
+          <form class="form-inline">
+              <div class="form-group">
+                  <label class="mr-2 text-secondary" for="exampleFormControlSelect1">SORT BY</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Price(Low to High)</option>
+                      <option>Price(High to Low)</option>
+                      <option>Newest First</option>
+                      <option>Oldest First</option>
+                      <option>Featured</option>
+                  </select>
+              </div>
+          </form>
+      </div>
+        <div class="active mt-4">
+          <h5 class="font-weight-bold mr-lg-5 mb-5 text-danger">Showing 18 - 25 out of 76 items</h5>
+        </div>
+        
+      </div>
+
+      <!-- new card -->
+      <div class="tab-content" id="nav-tabContent">
+        <div class="row products" id="productListArea">
+
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="main-footer"> </footer>
+
+  <a id="scrollUp"><i class="fa fa-arrow-up"></i></a>
+
+  <script src="js/header-footer.js"></script>
+  <script src="js/product.service.js"></script>
+  <script src="js/index.js"></script>
+  
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swag of India</title>
+    <link rel="icon" type="images/png" href="images/flavicon.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/ebd8283d0b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-all.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/header-footer.js"></script>
+
+</head>
+
+<body>
+
+    <header id="main-header"></header>
+
+    <nav aria-label="breadcrumb" id="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+        </ol>
+    </nav>
+
+    <section class="cart-section">
+        <div class="container-fluid">
+
+            <div class="top-flex-container">
+                <h4 class="font-weight-bold mb-3 mr-5">MY CART</h4>
+                <div class="totalCost d-flex justify-content-xl-between">
+                    <p class="key font-weight-bold mr-2">Total</p>
+                    :
+                    <p class="value d-flex font-weight-bold ml-2">Rs.<span id="totalCartValue">0</span></p>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="column1 col ml-xl-0 ml-sm-2 mb-2 col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                    <div class="cart-items-area" id="cart-items-area">
+
+                    </div>
+                </div>
+
+                <div class="column2 col ml-xl-0 ml-sm-2 mb-2 col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                    <div class="billing-section">
+                        <h5 class="font-weight-bold">COUPONS</h5>
+                        <span class="font-weight-bold"><img class="mr-2" src="Images/tag-icon.jfif" alt="tag icon"
+                                width="30px" height="30px">Apply Coupons</span>
+                        <button type="button" class="btn btn-default ml-3" aria-label="edit button">Apply</button>
+                        <hr>
+                        <h6>PRICE DETAILS</h6>
+                        <br>
+                        <div class="flex-item flex-item-1 d-flex justify-content-between">
+                            <p class="key">Price Details</p>
+                            <p class="value">Rs.<span id="originalPrice">0</span></p>
+                        </div>
+                        <div class="flex-item flex-item-1 d-flex justify-content-between">
+                            <p class="key">Bag Discount</p>
+                            <p class="value text-success">Rs.<span id="bagDiscount">0</span></p>
+                        </div>
+                        <div class="flex-item flex-item-1 d-flex justify-content-between">
+                            <p class="key">Coupon Discount</p>
+                            <p class="value"><a href="#">Apply Coupon</a></p>
+                        </div>
+                        <div class="flex-item flex-item-1 d-flex justify-content-between">
+                            <p class="key">Order Total</p>
+                            <p class="value">Rs.<span id="orderTotal">0</span></p>
+                        </div>
+                        <div class="flex-item flex-item-1 d-flex justify-content-between">
+                            <p class="key">Delivery Charges</p>
+                            <p class="value text-success"><del class="text-dark mr-2">Rs.99</del>Free</p>
+                        </div>
+                        <hr>
+                        <button type="button" class="btn btn-orange w-100" aria-label="edit button"
+                            onclick="location.href='Checkout.html';">PROCEED TO CHECKOUT</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="main-footer"></footer>
+    <a id="scrollUp"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="js/product.service.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+        </script>
+
+    <script>
+        window.onload = function () {
+            cart_num = JSON.parse(localStorage.getItem("Products_IDs")).length;
+            document.querySelector('#cart-badge').innerHTML = cart_num;
+            wishlist_num = JSON.parse(localStorage.getItem("Wishlist_IDs")).length;
+            document.querySelector('#wishlist-badge').innerHTML = wishlist_num;
+        }
+    </script>
+</body>
+
+</html>

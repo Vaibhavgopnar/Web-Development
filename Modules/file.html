@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script type="module" src="./file1.js"></script> -->
+    <script>
+
+        function prom(a, b) {
+            return new Promise(function (resolve, reject) {
+                console.log("Fetching data, please wait");
+                var c = a / b;
+                setTimeout(() => {
+
+                    if (a, b) {
+                        resolve(`Your answer is ${c}`);
+                    }
+                    else {
+                        reject("failed to calculate");
+                    }
+                }, 1000);
+
+            });
+        }
+
+        let onfulfilled = (result) => {
+            console.log(result);
+        }
+        let onrejection = (error) => {
+            console.log(error);
+        }
+
+        prom(5, 5).then(onfulfilled).catch(onrejection);
+
+        // let p1 = new Promise ( (resolve, reject) => {
+
+        //     setTimeout( () => {
+        //         console.log("First Promise has resolved");
+        //         resolve(10);
+        //     }, 1 * 1000);
+        // });
+        // let p2 = new Promise ( (resolve, reject) => {
+
+        //     setTimeout( () => {
+        //         console.log("Second Promise has resolved");
+        //         reject("failed");
+        //     }, 2 * 1000);
+        // });
+        // let p3 = new Promise ( (resolve, reject) => {
+
+        //     setTimeout( () => {
+        //         console.log("Third Promise has resolved");
+        //         resolve(30);
+        //     }, 2 * 1000);
+        // });
+
+        let promiseCall = function (returnData, message) {
+            return function (resolve, reject) {
+                setTimeout(() => {
+                    console.log(`The ${message} promise has resolved`);
+                    resolve(returnData);
+                }, returnData * 100);
+            };
+        };
+
+        let p1 = new Promise(promiseCall(10, "first"));
+        let p2 = new Promise(promiseCall(20, "second"));
+        let p3 = new Promise(promiseCall(30, "third"));
+        let p4 = new Promise(function (resolve, reject) {
+            reject("The fourth promice has rejected");
+        });
+
+        var total = 0;
+        Promise.all([p1, p2, p3, p4]).then((result) => {
+
+            for (var i in result) {
+                total += result[i];
+            }
+            console.log(`Results : ${result}`);
+            console.log(`Total : ${total}`);
+
+        }).catch((error) => {
+            console.log(`Error : ${error}`);
+        });
+
+    </script>
+    
+</head>
+
+<body>
+    
+</body>
+
+</html>

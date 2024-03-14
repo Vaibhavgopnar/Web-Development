@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: 250px 120px 120px; */
+            /* grid-template-columns: 250px 120px auto; */
+            /* grid-template-columns: 1fr 4fr 1fr; */
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 2rem;
+        }
+
+        .item {
+            /* height: 80px;
+            width: 120px; */
+            background-color: aqua;
+            margin: 3px;
+            border: 2px solid black;
+            padding: 15px 5pxy;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-rows: 1fr 1fr 4fr;
+            grid-auto-rows: 2fr;
+            grid-template-columns: 1fr 4fr 2fr;
+            grid-gap: 1rem;
+        }
+
+        .box {
+            background-color: red;
+            border: 2px solid black;
+            margin: 3px;
+        }
+
+        .box1 {
+            border: 2px solid black;
+            background-color: rgb(234, 177, 234);
+            padding: 10px;
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 1rem;
+        }
+
+        .box1:first-child {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column: 1 /span 3;
+        }
+
+        .container2 {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, MinMax(200px, 1fr));
+            /* grid-template-columns: 112px 112px 112px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* justify-content: center; */
+        }
+
+        .box2 {
+            border: 2px solid black;
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        .container3 {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        .item1 {
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 23px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .container4 {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+            .container4 {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+            .container4 {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media (min-width:500px) and (max-width:900px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container4 {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media (min-width:900px) {
+            body {
+                background-color: white;
+            }
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 18px;
+            background-color: lightsalmon;
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+        
+        .c1{
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            
+        }
+        .vip{
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+            display: grid;
+        }
+        #b1{
+            background-color: red;
+        }
+        #b2{
+            background-color: green;
+        }
+        #b3{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="c1">
+        <div id="b1" class="vip"></div>
+        <div id="b2" class="vip"></div>
+        <div id="b3" class="vip"></div>
+    </div>
+
+
+    <h3>CSS Media Queries</h3>
+    <div class="container4">
+        <nav class="bdr">
+            Home About Contact
+        </nav>
+        <section class="bdr">
+            <h2>Learn CSS</h2>
+        </section>
+        <aside class="bdr">
+            <h1>More About Us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">Copyright CodeWithVaibhav 2022</footer>
+    <hr>
+    <h3>Grid Template Areas</h3>
+    <div class="container3">
+        <div id="navbar" class="item1">Home About Contact Us</div>
+        <div id="section" class="item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus eius
+            facilis! Assumenda alias error autem architecto, nobis beatae labore recusandae aspernatur dolore Lorem,
+            ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium ratione perferendis dolore iusto
+            dignissimos vero recusandae similique voluptates sit, nulla rerum, excepturi sequi nihil optio, illum
+            doloribus sapiente soluta?</div>
+        <div id="aside" class="item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, ipsa debitis
+            exercitationem consectetur autem enim aliquam rem quibusdam dignissimos, modi molestias eos quidem
+            voluptates? Odit dolore tempora cupiditate adipisci numquam?Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptates tenetur temporibus est cum, facilis qui esse voluptatem minus porro atque magni
+            sed corporis molestiae necessitatibus nihil facere quaerat sunt nemo.</div>
+        <footer class="item1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore debitis impedit amet.
+        </footer>
+    </div>
+    <hr>
+    <h3>CSS Grid4 Autofit and MinMax</h3>
+    <div class="container2">
+        <div class="box2">Item-1</div>
+        <div class="box2">Item-2</div>
+        <div class="box2">Item-3</div>
+        <div class="box2">Item-4</div>
+        <div class="box2">Item-5</div>
+        <div class="box2">Item-6</div>
+        <div class="box2">Item-7</div>
+        <div class="box2">Item-8</div>
+        <div class="box2">Item-9</div>
+        <div class="box2">Item-10</div>
+        <div class="box2">Item-11</div>
+        <div class="box2">Item-12</div>
+    </div>
+    <hr>
+    <h3>CSS Grid3 Spanning Multiple Rows and Columns</h3>
+    <div class="container1">
+        <div class="box1">Item-1</div>
+        <div class="box1">Item-2</div>
+        <div class="box1">Item-3</div>
+        <div class="box1">Item-4</div>
+        <div class="box1">Item-5</div>
+        <div class="box1">Item-6</div>
+        <div class="box1">Item-7</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-8</div>
+    </div>
+    <hr>
+    <h3>CSS Grid Rows and Gaps</h3>
+    <div class="grid">
+        <div class="box">This is box-1</div>
+        <div class="box">This is box-2</div>
+        <div class="box">This is box-3</div>
+        <div class="box">This is box-4</div>
+        <div class="box">This is box-5</div>
+        <div class="box">This is box-6</div>
+        <div class="box">This is box-7</div>
+        <div class="box">This is box-8</div>
+        <div class="box">This is box-9</div>
+        <div class="box">This is box-10</div>
+    </div>
+    <hr>
+    <h3>CSS Grid1</h3>
+    <div class="container">
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+    </div>
+</body>
+
+</html>

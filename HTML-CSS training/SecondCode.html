@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Second Page</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 150px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            position: relative;
+            top: 50px;
+            z-index: 35;
+            background-color: red;
+        }
+
+        #box2 {
+            /* display: none; Will hide the element and the space */
+            /* visibility: hidden; will hide the element but will show it's empty space */
+            background-color: yellow;
+            position: relative;
+            top: 14px;
+            z-index: -36;
+            /* z-index: will work only for position: relative, absolute, fixed or sticky ; */
+        }
+
+        #box3 {
+            background-color: green;
+        }
+
+        .container {
+            height: 400px;
+            width: 100%;
+            border: 2px solid black;
+            /* Initialize the container as a flex box  */
+            display: flex;
+            /* Flex properties for flex conteiner  */
+            /* flex-direction: row;   (default value is row)
+            flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-flow: row-reverse wrap; */
+
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around;
+
+            /* justify-content will justify the content in vertical direction  */
+            align-items: center;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: stretch;
+        }
+
+        .item {
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+            width: 160px;
+            height: 100px;
+        }
+
+        #item1 {
+            /* Flex properties for flex conteiner  */
+            /* Higher the order, later it shows up in the container */
+            order: 2;
+            /* flex-grow: 3; */
+        }
+
+        #item2 {
+            /* order: 3;
+            flex-grow: 5; */
+            flex-shrink: 2;
+            flex-basis: 320px;
+            /* when flex-direction:  is set to row flex-basis: will control width  */
+            /* when flex-direction:  is set to column flex-basis: will control height  */
+        }
+
+        #item3 {
+            /* order: 5; */
+            flex: 2 2 220px;
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+        }
+
+        .box1 {
+            font-size: 22px;
+            text-align: center;
+            background-color: red;
+            color: black;
+            display: none;
+        }
+
+        @media only screen and (max-width: 300px) {
+            #box11 {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 500px) and (min-width:300px) {
+            #box12 {
+                display: block;
+                background-color: yellow;
+            }
+        }
+
+        @media only screen and (max-width: 800px) and (min-width:500px) {
+            #box13 {
+                display: block;
+                background-color: green;
+            }
+        }
+
+        @media only screen and (min-width:800px) {
+            #box14 {
+                display: block;
+                background-color: blue;
+            }
+        }
+
+        html {
+            font-size: 25px;
+        }
+
+        .container1 {
+            font-size: 10px;
+            border: 2px solid red;
+            /* width: 100vw;
+            height: 50vh; */
+        }
+
+        /* h2 {
+            text-align: center;
+        } */
+
+        #first {
+            font-size: 2em;
+            padding: 2em;
+        }
+
+        #second {
+            font-size: 2rem;
+            padding: 2rem;
+        }
+
+        h3 {
+            text-align: center;
+            /* background-color: red; */
+            color: blue;
+            font-weight: bold;
+
+        }
+
+        /* if p is contained by any li which is contained by div  */
+        /* div li p {
+            color: yellow;
+            font-weight: bold;
+            background-color: gray;
+        }
+
+        /* if p is right inside div then this will be applied  */
+        /* div>p {
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        }
+
+        /* if p is right after div i.e. p is next sibling of div  */
+        /* div+p {
+            color: white;
+            background-color: aqua;
+        } */
+
+        .container3 {
+            margin: auto;
+            display: block;
+            width: 333px;
+        }
+
+        input {
+            display: block;
+        }
+
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+        a[target] {
+            color: aqua;
+        }
+
+        /* nth element will change it's property  */
+        /* li:nth-child(3) {
+            color: cyan;
+        }
+
+        /* every nth element will change it's property  */
+        /* li:nth-child(2n+0) {
+            color: rgb(96, 136, 230);
+        }
+
+        li:nth-child(odd){}
+        /* every odd th element will change it's property  */
+        /* li:nth-child(even){}  */
+        /* every even th element will change it's property  */
+
+        /* body {
+             background-color: black;
+            color: white;
+            padding: 0;
+            margin: 0; */
+            /* position:relative;
+            top: 0;
+            left: 0; 
+        } */
+
+        header ::before {
+            /* background: url('https://www.pixelstalk.net/wp-content/uploads/2016/07/Desktop-hd-3d-nature-images-download.jpg') no-repeat center center/cover; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.12;
+        }
+
+        section {
+            display: flex;
+            margin: 3px 230px;
+            flex-direction: column;
+            align-items: center;
+            height: 350px;
+            /* border: 2px solid red; */
+            justify-content: center;
+        }
+
+        /* section ::before{
+            content: This is containent;
+        } */
+        .navigation {
+            display: flex;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        .navigation li a {
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .container4 {
+            display: flex;
+        }
+
+        .card {
+            padding: 23px 30px;
+            /* border: 2px solid red; */
+            margin: 16px;
+            background-color: antiquewhite;
+            color: black;
+            box-shadow: 8px 10px green;
+            box-shadow: -8px -10px green;
+            box-shadow: -7px -5px 5px green;
+            box-shadow: -7px -5px 5px 30px green;
+            box-shadow: -7px -5px 5px 30px rgba(71, 102, 172, 0.6);  /* alpha for darkness */
+
+            box-shadow: inset 5px 5px gray; /* inside shadow */
+            box-shadow: 8px 10px green, 5px 15px blue;
+        }
+        .card h4{
+            text-shadow: 3px 4px white;
+        }
+        :root{
+            --primary-color: blue;
+            --danger-color: red;
+            --box-color: black;
+            --maxw: 400px;
+            --secondary-color: greenyellow;
+        }
+        .boxx{
+            width: 200px;
+            height: 150px;
+            background-color: var(--primary-color);
+            border: 2px solid var(--danger-color);
+            box-shadow: 3px 3px var(--box-color);
+            margin:  2px 9px;
+
+        }
+        .container5{
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+
+        }
+        .container6{
+            background-color: yellow;
+        }
+        .box2{
+            display: flex;
+            align-items: center;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* animation-name: vaibhav; */
+            animation-name: vaibhav2;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            /* animation-iteration-count: infinite; */
+            /* animation-fill-mode: forwards; */
+            /* animation-fill-mode: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-direction: forwards; */
+            /* animation: name duration timing-function delay; */
+        }
+        @keyframes vaibhav {
+            form{
+                width: 200px;
+            }
+            to{
+                width: 800px;
+            }
+        }
+        @keyframes vaibhav2 {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 200px;
+                left: 0px;
+            }
+            75%{
+                top: 200px;
+                left: 200px;
+            }
+            100%{
+                top: 0px;
+                left: 200px;
+            }
+        }
+        #id1{
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            /* transition-property: background-color;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+            /* transition: background-color 1s ease-in-out 3s; */
+
+            transition: all 1s ease-in-out .3s;
+
+        }
+        #id1:hover{
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            border-radius: 100px;
+            font-size: 40px;
+        }
+        *{
+            margin: opx;
+            padding: 0px;
+        }
+        .container8{
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: beige;            
+        }
+        .bocs{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+            border: 2px solid black;
+            border-radius: 20px;
+            height: 300px;
+            width: 300px;
+            transition: all 1s ease-in-out;
+        }
+        .bocs:hover{
+            /* transform: rotate(360deg); */
+            /* transform: skew(40deg); */
+            /* transform: scale(2); */
+            /* transform: translateX(120px); */
+            /* transform: translateY(-120px); */
+            transform: translate(120px, 120px);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Transforms</h3>
+    <div class="container8">
+        <div class="bocs">
+            This is Box
+        </div>
+    </div>
+    <hr>
+    <h3>Transactions</h3>
+    <div class="container7">
+        <div id="id1">
+            This is Box
+        </div>
+    </div>
+    <hr>
+    <h3>Animations and KeyFrames</h3>
+    <div class="container6">
+        <div class="box2">This is Animation</div>
+    </div>
+    <hr>
+    <h3>CSS Variables/Custom Properties </h3>
+    <div class="container5">
+        <div class="boxx"></div>
+        <div class="boxx"></div>
+        <div class="boxx"></div>
+    </div>
+    <hr>
+    <h3>Box Shadow and Text Shadow</h3>
+    <div class="container4">
+        <div class="card" id="card1">
+            <h4>card1</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quis ipsum asperiores delectus alias
+                adipisci, necessitatibus iusto perferendis eum distinctio cumque quas, commodi non vel? Fugit modi
+                voluptates tempora dicta maxime consequuntur vero unde.</p>
+        </div>
+        <div class="card" id="card2">
+            <h4>card2</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quis ipsum asperiores delectus alias
+                adipisci, necessitatibus iusto perferendis eum distinctio cumque quas, commodi non vel? Fugit modi
+                voluptates tempora dicta maxime consequuntur vero unde.</p>
+        </div>
+        <div class="card" id="card3">
+            <h4>card3</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quis ipsum asperiores delectus alias
+                adipisci, necessitatibus iusto perferendis eum distinctio cumque quas, commodi non vel? Fugit modi
+                voluptates tempora dicta maxime consequuntur vero unde.</p>
+        </div>
+    </div>
+    <hr>
+    <h3>Before and After psedo Selectors</h3>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="itm"><a href="#">About us</a></li>
+                <li class="itm"><a href="#">Home</a></li>
+                <li class="itm"><a href="#">Services</a></li>
+                <li class="itm"><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Welcome to coding World</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, dolorem at! Provident in, qui nemo
+            magni veniam blanditiis? Minus illum, fugit architecto officiis praesentium ut nihil quae possimus
+            maiores, et maxime ducimus! Nesciunt neque voluptates inventore odio, dignissimos sit ullam.</p>
+    </section>
+
+    <hr>
+    <h3>Attributes and nth pseudo Selectors</h3>
+    <div class="container3">
+        <h1><a href="http://google.com" target="_blank">go to google</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="atom" id="atom1">Item1</li>
+            <li class="atom" id="atom2">Item2</li>
+            <li class="atom" id="atom3">Item3</li>
+            <li class="atom" id="atom4">Item4</li>
+            <li class="atom" id="atom5">Item5</li>
+        </ul>
+    </div>
+
+    <hr>
+    <h3>More on Selectors</h3>
+    <div class="container2">
+        <div class="row">
+            <ul>
+                <li class="item1">
+                    <p>This is another para inside li</p>
+                </li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is middle paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+    <hr>
+    <h3>Size Units</h3>
+    <div class="container1">
+        <h2 id="first">This is First Heading </h2>
+        <h2 id="second">This is Second Heading </h2>
+        <h2 id="third">This is Third Heading </h2>
+    </div>
+    <hr>
+    <h3>Media Queries</h3>
+    <div class="box1" id="box11">This is Iphone</div>
+    <div class="box1" id="box12">This is Tablet</div>
+    <div class="box1" id="box13">This is Computer</div>
+    <div class="box1" id="box14">This is Laptop</div>
+    <hr>
+    <h3>FlexBox</h3>
+    <div class="container">
+        <div class="item" id="item1">First box</div>
+        <div class="item" id="item2">Second box</div>
+        <div class="item" id="item3">Thirdbox</div>
+        <div class="item" id="item4">Fourth box</div>
+        <div class="item" id="item5">Fifth box</div>
+        <div class="item" id="item6">Sixth box</div>
+    </div>
+    <hr>
+    <h3>visibility</h3>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <hr>
+</body>
+
+</html>

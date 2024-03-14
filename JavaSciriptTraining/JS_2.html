@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+            <li>Item-8</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = 'This is a string';
+        var string1 = 'This is a string2';
+        console.log(string1)
+
+        let a1 = "oyu";
+        console.log(a1)
+        {
+            let a = "this";
+            console.log(a)
+        }
+
+        const a = 'This cannot be change';
+        // a = 'change this const';
+        console.log(a)
+
+        // conditional statements
+        let age = 40;
+        if(age<18){
+            console.log("you can drink water")
+        }
+        else if(age == 40){
+            console.log("you can drink cold drink")
+        }
+        else{
+            console.log("drink milk");
+        }
+
+        const cups = 43;
+        switch (cups) {
+            case 41:
+                console.log("The value of cups is 41");
+                break;
+            case 42:
+                console.log("The value of cups is 42");
+                break;
+            case 43:
+                console.log("The value of cups is 43");
+                break;
+            case 44:
+                console.log("The value of cups is 44");
+                break;
+        
+            default:
+                break;
+        }
+
+
+        let myvar1 = 34;
+        let myvar2 = "string";
+        let myvar3 = true;
+        let myvar4 = null;
+        let myvar5 = undefined;
+
+        let employee = {
+            name: "Vaibhav",
+            salary: 20000,
+            course: "Web Development",
+            skills: "JavaScript",
+        }
+        console.log(employee);
+        console.log(employee.course);
+
+        let names = [1, 2, 3, "vaibhav", undefined];
+        console.log(names[3]);
+
+        console.log("Array sort");
+        let names1 = new Array(1, 4, 8,2, 3, "vaibhav", undefined);
+        console.log(names1.length);
+        names1 = names1.sort();
+        names1.push("this is pushed");
+        console.log(names1);
+
+
+
+    </script>
+</body>
+</html>

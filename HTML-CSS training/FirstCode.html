@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="This is discription">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>My First Page</title>
+
+    <!-- This is how to include external css -->
+    <style>
+        /* element selector */
+        h3 {
+            color: blue;
+            font-style: italic;
+
+        }
+
+        /* id selector */
+        #redElement {
+            color: green;
+        }
+
+        /* class selector */
+        .pgYellow {
+            background-color: yellow;
+        }
+
+        /* grouping selector */
+        footer, span {
+            color: aqua;
+            background-color: pink;
+        }
+
+        /* css fonts  */
+        #fonts {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 33px;
+            /* 1/96th of an inch  */
+            line-height: 2.5em;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* css colors */
+        #csscolors {
+            color: blueviolet;
+        }
+
+        #para2 {
+            color: rgb(0, 230, 0);
+        }
+
+        #para3 {
+            color: rgba(36, 233, 15);
+            border: 3px solid purple;
+        }
+
+        /* padding and margin */
+        .container {
+            background-color: #9cd761;
+            border: 3px solid rgb(70, 48, 227);
+            padding: 10px 20px;
+            /* padding-top: 10px; */
+            /* padding: top, right, bottom, left; */
+            /* padding: y(top/bottom) x(left/right); */
+            margin: 14px 19px;
+            border-radius: 23px;
+            width: 533px;
+            box-sizing: border-box;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container1 {
+            width: 900px;
+            height: 550px;
+            border: 3px solid purple;
+            background-color: rgb(109, 246, 59);
+            margin: 33px auto;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .item {
+            border: 3px solid gray;
+            margin: 12px 3px;
+            padding: 10px 3px;
+            background-color: rgb(158, 110, 128);
+        }
+
+        #fruit {
+            float: left;
+            width: 49%;
+        }
+
+        #computer {
+            float: left;
+            width: 48%;
+        }
+
+        #stationary {
+            float: left;
+            width: 49%;
+        }
+
+        #fashion {
+            float: left;
+            /* clear: both; */
+            width: 48%;
+        }
+
+        p,
+        h3 {
+            /* text-align: right; */
+            /* text-align: left; */
+            text-align: justify;
+        }
+
+        h1 {
+            margin: auto;
+            width: 455px;
+        }
+
+        .container2 {
+            border: 2px solid red;
+            background-color: rgb(58, 210, 157);
+            padding: 34px;
+            margin: 34px;
+            width: 700px;
+        }
+
+        .btn {
+            color: rgb(12, 220, 182);
+            background-color: rgb(53, 14, 14);
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            border-radius: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            color: chartreuse;
+            background-color: rgb(94, 31, 24);
+            border: 2px solid black;
+        }
+
+        a:active {
+            background-color: rgb(253, 253, 4);
+        }
+
+        a:visited {
+            background-color: rgb(158, 143, 144);
+        }
+
+        .navbar{
+            background-color: rgb(184, 120, 120);
+            border-radius: 14px;
+            /* position: fixed;
+            top: 3px;
+            left: 100px; */
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 13px 18px;
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: rgb(26, 230, 53);
+        }
+        .navbar li a:hover{
+            color: aqua;
+            background-color: rgb(41, 6, 6);
+        }
+        .search{
+            float: right;
+            padding: 12px 50px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 160px;
+        }
+        header{
+            border: 2px solid red;
+            margin: auto;
+            width: 900px;
+        }
+        img{
+            width: 140px;
+            height: 80px;
+            margin: auto;
+            display: block;
+        }
+        h4{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+            text-align: center;
+        }
+        .box{
+            border: 4px solid black;
+            background-color: gray;
+            margin: 4px;
+            padding: 23px;
+            width: 32%;
+            display: inline-block;
+        }
+        .container3{
+            width: 900px;
+            margin: auto;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .box1{
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        #box3{
+            position: relative;
+            top: 6px;
+            left: 20px;
+            /* position: absolute;
+            top: 10px;
+            left: 16px; */
+            /* position: fixed;
+            top: 10px;
+            right: 16px; */
+            /* position: sticky;
+            top: 10px;
+            right: 16px; */
+        }
+
+    </style>
+  
+</head>
+
+<body>    
+    <h3>CSS Positions</h3>
+    <div class="box1" id="box1">1</div>
+    <div class="box1" id="box2">2</div>
+    <div class="box1" id="box3">3</div>
+    <div class="box1" id="box4">4</div>
+    <hr>
+    <h3>CSS Display Property</h3>
+    <header class="top">
+        <img src="photo-162.jpg" alt="">
+        <h4>Welcome to my blog</h4>
+    </header>
+    <div class="container3">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus necessitatibus totam inventore, veniam exercitationem non quia culpa saepe dolorem. Aliquam vero excepturi adipisci fugit magni libero, tempore aspernatur. Quis a commodi dolorum exercitationem eum velit natus neque dignissimos dolore unde!</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus necessitatibus totam inventore, veniam exercitationem non quia culpa saepe dolorem. Aliquam vero excepturi adipisci fugit magni libero, tempore aspernatur. Quis a commodi dolorum exercitationem eum velit natus neque dignissimos dolore unde!</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus necessitatibus totam inventore, veniam exercitationem non quia culpa saepe dolorem. Aliquam vero excepturi adipisci fugit magni libero, tempore aspernatur. Quis a commodi dolorum exercitationem eum velit natus neque dignissimos dolore unde!</p>
+        </div>
+    </div>
+
+    <hr>
+    <h3>Navigation</h3>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+    <div class="container2" id="cont1">
+        <h3>This is buttons styles</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolores doloribus cupiditate laboriosam autem
+            assumenda ad fugiat, similique et culpa vitae amet vero, laudantium voluptate fuga quisquam veniam
+            blanditiis sequi libero consequatur minus aut at necessitatibus quasi. Eum, consectetur vitae.</p>
+        <a href="https://google.com" target="_blank" class="btn">Read More</a>
+        <button class="btn">Contact Us</button>
+    </div>
+    <hr>
+    <h3>Alignments</h3>
+    <div class="container1">
+        <h1>Welcome to Alignment</h1>
+        <div id="fruit" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita
+                dolorum ullam et aliquam aperiam delectus ratione exercitationem, ipsam fugit perspiciatis eveniet culpa
+                unde hic assumenda cupiditate eaque laborum repellat? Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Fuga fugit molestiae sed earum iure minus error eaque tempora consequuntur qui ipsam, mollitia
+                iste eligendi, est possimus tempore saepe unde quod! Porro iure delectus debitis?</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita
+                dolorum ullam et aliquam aperiam delectus ratione exercitationem, ipsam fugit perspiciatis eveniet culpa
+                unde hic assumenda cupiditate eaque laborum repellat? Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Fuga fugit molestiae sed earum iure minus error eaque tempora consequuntur qui ipsam, mollitia
+                iste eligendi, est possimus tempore saepe unde quod! Porro iure delectus debitis?</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                expedita dolorum ullam et aliquam aperiam delectus ratione exercitationem, ipsam fugit perspiciatis
+                eveniet culpa unde hic assumenda cupiditate eaque laborum repellat?</p>
+        </div>
+        <div id="fashion" class="item">
+            <h3>Fashion</h3>
+            <p id="fashionpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita
+                dolorum ullam et aliquam aperiam delectus ratione exercitationem, ipsam fugit perspiciatis eveniet culpa
+                unde hic assumenda cupiditate eaque laborum repellat?</p>
+        </div>
+    </div>
+
+    <hr>
+    <h3>Box Model - Element Padding border Margin</h3>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque eos officiis sint
+            voluptatem possimus omnis, voluptates consectetur. Id ratione magnam vero suscipit.</p>
+    </div>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque eos officiis sint
+            voluptatem possimus omnis, voluptates consectetur. Id ratione magnam vero suscipit.</p>
+    </div>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque eos officiis sint
+            voluptatem possimus omnis, voluptates consectetur. Id ratione magnam vero suscipit.</p>
+    </div>
+
+    <hr>
+    <h3>CSS colors</h3>
+    <p id="csscolors">This is paragrapdh for css colors implements</p>
+    <p id="para2">This is another para</p>
+    <p id="para3">This ia third paragraph</p>
+
+    <hr>
+    <h3>CSS Fonts</h3>
+    <p id="fonts">Lets play with fonts. It's very exiting</p>
+
+    <hr>
+    <h3>Developer tools</h3>
+    <p>This is paragraph for developer tools</p>
+
+    <hr>
+    <!-- h1 for heading -->
+    <h1>Hello world</h1>
+    <h2>Hello world</h2>
+    <h3>Hello world</h3>
+
+    <!-- hr for horizontal line -->
+    <hr>
+    <!-- Lorem20 for dummy 20 words -->
+    <p id="redElement">Lorem ipsum dolor sit amet <strong>This is bold consectetur</strong> adipisicing <em>This is
+            italic</em> elit.
+        Ipsum, consequuntur!</p>
+    <p class="pgYellow">First line <br>This is new line</p>
+    <!-- br for break the line -->
+    <br>
+    <hr>
+    <!-- links and images -->
+    <a href="https://google.com" target="_blank">Go to google</a><br>
+    <a href="https://skill-lync.com" target="_blank">skilllync</a><br>
+    <a href="/FirstCode.css">css</a>
+    <hr>
+    <!-- images implement -->
+    <img src="photo-162.jpg" alt="Error loading image" width="200" height="100">
+    <hr>
+    <!-- tables and lists -->
+    <ul type="square">
+        <li>Html</li>
+        <li>CSS</li>
+        <li>javascript</li>
+        <li>SQL</li>
+    </ul>
+    <ol type="a">
+        <li>Html</li>
+        <li>CSS</li>
+        <li>javascript</li>
+        <li>SQL</li>
+    </ol>
+    <hr>
+    <!-- tables -->
+    <h3>HTML Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee Id</th>
+                <th>Employee Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Vaibhav</td>
+                <td>3456</td>
+                <td>Developer</td>
+            </tr>
+            <tr>
+                <td>Shubham</td>
+                <td>1289</td>
+                <td>Tester</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2>HTML Form</h2>
+    <form action="backend.txt">
+        <label for="name">Name:</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email: <input type="text" name="myEmail">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus" id="">
+        </div>
+        <br>
+        <label for="check">Are you eligible:</label>
+        <div>
+            <input type="checkbox" name="myCheckBox" id="check">
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender">
+            Female <input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            Write about yourself: <textarea name="myText" cols="50" rows="5"></textarea>
+        </div>
+        <br>
+        <h3>Select Button</h3>
+        <div>
+            <label for="car">Car </label>
+            <select name="myCar" id="car">
+                <option value="ind" selected>Indica</option>
+                <option value="swf">Swift</option>
+                <option value="bmw">BMW</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+        <br>
+
+    </form>
+    <hr>
+    <h3>Inline and Block elements</h3>
+
+    <p style="border: 2px solid red;">This is a paragraph</p>
+    <p style="border: 2px solid blue;">This is another paragraph</p>
+    <span style="border: 2px solid rgb(0, 255, 13);">This is span</span> <span
+        style="border: 2px solid rgb(4, 249, 28);"> This is also span</span>
+    <br>
+    <hr>
+    <h3>Ids and classes</h3>
+    <div id="mainbox" class="redBg">This is main box</div>
+    <span class redBg></span>
+    <span id="mainSpane"></span>
+    <br>
+    <!-- Emmet -->
+    <!-- . is for class and # for id -->
+    <div class="redBg blackBorder anotherclass"></div>
+    <!-- emmet takes div tag as default -->
+    <div class="blackBackground"></div>
+
+    <!-- creating multiple elements using Emmet -->
+    <!-- span.myclass.myclass2.myclass3 + Tab -->
+    <span class="myclass myclass2 myclass3">First</span>
+    <span class="myclass myclass2 myclass3">Second</span>
+    <span class="myclass myclass2 myclass3">Third</span>
+    <span class="myclass myclass2 myclass3">Fourth</span>
+    <hr>
+
+    <h3>HTML Entities </h3>
+    <div class="container">
+        <p>This is paragraph</p>
+    </div>
+    <div class="container">
+        <p>This is another &nbsp; paragraph</p>
+        <p>paragraph is written like this &lt;p&gt; </p>
+        <p>pound is written like this &pound;</p>
+        <p>Copyright is written like this &copy;</p>
+        <p>empty is written like this &#8203;</p>
+    </div>
+    <hr>
+
+    <h3>HYML Semantic Elements</h3>
+    <details>
+        <summary>Hi Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis quod, nostrum itaque, nobis aut
+            pariatur ipsa excepturi dolorem debitis, blanditiis vitae quam autem dicta dolorum voluptates corporis ex
+            facere eligendi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem, cupiditate corrupti
+            quis a quam provident ab? Veritatis consequatur possimus maxime hic esse odit. Quibusdam doloremque ducimus
+            eius a odio?</summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptate dolore ea tenetur, necessitatibus
+        quas excepturi impedit quibusdam magnam, in eligendi obcaecati deserunt repellendus labore iusto harum quos
+        similique neque.
+    </details>
+    <hr>
+    <span>This is span</span>
+    <footer>This is footer</footer>
+
+</body>
+
+</html>
